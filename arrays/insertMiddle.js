@@ -1,3 +1,5 @@
+// Write a C program showing how to insert an element entered by the user in the middle of an array
+
 const planets = [
   "Venus",
   "Mercury",
@@ -9,6 +11,7 @@ const planets = [
   "Neptune",
 ];
 
+// Assume entered from an HTML for or read from database
 const missingPlanet = "Jupiter";
 
 function insertMiddle(array, insertedParam) {
