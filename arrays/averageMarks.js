@@ -8,7 +8,6 @@
  * Third Row, Math marks
  */
 
-const averageMarks = {};
 const subjects = ["Physics", "Chemistry", "Math"];
 const marks = [
   [70, 35, 33, 56],
@@ -17,6 +16,7 @@ const marks = [
 ];
 
 function AverageMarks(array) {
+  const averageMarks = {};
   for (let rowLength = 0; rowLength < marks.length; rowLength++) {
     let marksTotal = 0;
     for (let colLength = 0; colLength < array[rowLength].length; colLength++) {
@@ -24,12 +24,10 @@ function AverageMarks(array) {
     }
     averageMarks[subjects[rowLength]] = marksTotal / 4;
   }
-  console.log(averageMarks);
-  // return averages;
+
+  return averageMarks;
 }
 
 // Call the function and store the result
 const subjectAverages = AverageMarks(marks);
-
-// Output the result
-// console.log(subjectAverages);
+console.log(subjectAverages);
