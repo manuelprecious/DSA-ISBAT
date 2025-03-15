@@ -1,4 +1,4 @@
-// Write a C program showing how to insert an element entered by the user in the middle of an array
+// Write a program showing how to insert an element entered by the user in the middle of an array
 
 const planets = [
   "Venus",
@@ -15,14 +15,16 @@ const planets = [
 const missingPlanet = "Jupiter";
 
 function insertMiddle(array, insertedParam) {
-
-    // Determining the middle position
   const middlePosition = Math.floor(array.length / 2);
-  const firstNElements = array.slice(0, middlePosition);
-  const lastFromN = array.slice(middlePosition);
-  const newArray = [...firstNElements, insertedParam, ...lastFromN];
-  return newArray;
+
+  const arrayLength = (array.length = array.length + 1);
+
+  for (let i = arrayLength - 1; i >= middlePosition; i--) {
+    array[i] = array[i - 1];
+  }
+
+  array[middlePosition] = insertedParam;
 }
 
 const newArray = insertMiddle(planets, missingPlanet);
-console.log(newArray);
+console.log(planets);

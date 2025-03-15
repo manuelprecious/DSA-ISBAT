@@ -12,4 +12,8 @@ const DOMESTIC_ANIMALS = [
   "Sheet",
 ];
 
-const mergedArray = WILD_ANIMALS.concat(...DOMESTIC_ANIMALS);
+for (let i = 0; i < DOMESTIC_ANIMALS.length; i++) {
+  WILD_ANIMALS.push(DOMESTIC_ANIMALS[i]);
+}
+
+console.log(WILD_ANIMALS);
